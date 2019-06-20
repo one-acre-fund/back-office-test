@@ -1,0 +1,58 @@
+describe("Create Global Procurement Request", function () {
+    // Create Procurement Request
+    it('Should be able to create Global procurement request', function () {
+        browser.driver.findElement(By.xpath("//a[contains(text(),'Procurement')]")).click();
+        browser.waitForAngular();
+        browser.driver.findElement(By.xpath("//a[contains(text(),'Create new request')]")).click();
+        browser.waitForAngular();
+        element(by.xpath("//div[@id='globalOrInCountryRadioButton']/div/label[2]")).click();
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div/div[2]/div/span/span/span[2]/span")).click();
+        browser.waitForAngular();
+        element(by.xpath("//ul[@id='CountryId_listbox']/li[4]")).click();
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div/div[3]/div/span/span/span[2]/span")).click();
+        browser.waitForAngular();
+        element(by.xpath("//ul[@id='SeasonId_listbox']/li[7]")).click();
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div/div[4]/div/span/span/span[2]/span")).click();
+        browser.waitForAngular();
+        element(by.xpath("//ul[@id='ItemId_listbox']/li[28]")).click();
+        browser.waitForAngular();
+        element(by.id("Comments")).click();
+        browser.waitForAngular();
+        element(by.name("Comments")).sendKeys("Automated description message for Global procurement request");
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div/div[8]/div/span/span/input")).click();
+        browser.waitForAngular();
+        element(by.id("Quantity")).sendKeys('950');
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div[2]/div[2]/div/span/span/span")).click();
+        browser.waitForAngular();
+        element(by.xpath("//ul[@id='DeliveryLocationId_listbox']/li")).click();
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div[2]/div[3]/div/span/span/span")).click();
+        browser.waitForAngular();
+        element(by.xpath("//ul[@id='LocationId_listbox']/li")).click();
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div[2]/div[4]/div/span/span/span")).click();
+        browser.waitForAngular();
+        element(by.xpath("//ul[@id='DepartmentId_listbox']/li[20]")).click();
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div[2]/div[5]/div/span/span/span")).click();
+        browser.waitForAngular();
+        element(by.xpath("//li[contains(.,'(none)')]")).click();
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div[2]/div[6]/div/span/span/span")).click();
+        browser.waitForAngular();
+        element(by.xpath("//ul[@id='PurchasePriorityId_listbox']/li[2]")).click();
+        browser.waitForAngular();
+        element(by.xpath("//form[@id='create-request']/div[2]/div[11]/div/span/span/span")).click();
+        browser.waitForAngular();
+        element(by.xpath("//ul[@id='ApproverId_listbox']/li[2]")).click();
+        browser.waitForAngular();
+        element(by.name("submitButton")).click();
+        browser.waitForAngular();
+    });
+
+});
